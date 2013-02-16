@@ -1,3 +1,17 @@
+// ensure jQuery is loaded, then call loadKnee()
+if (typeof jQuery === 'undefined')
+{
+	var j = document.createElement('script');
+	j.type = 'text/javascript';
+	j.src = 'https://raw.github.com/glenwatson/Toasty/master/jQuery1.9.0.js';
+	j.onload = loadKnee;
+	document.getElementsByTagName('head')[0].appendChild(j);
+}
+else
+{
+	loadKnee();
+}
+
 //key recognition
 var uppercutkeys = [], uppercut = "39,39,38,40";
 $(document).keydown(function(e)
