@@ -20,8 +20,8 @@ function loadToasty()
 			$('body').append(toastyimage);
 			$('body').append(toastysound);
 			var danforden = $('#bigdan').css({
-				"position":"fixed",
-				"bottom": "-300px",
+				"position" : "fixed",
+				"bottom" : "-300px",
 				"right" : "-300px",
 				"display" : "block"
 			})
@@ -32,7 +32,7 @@ function loadToasty()
 			// pops up dan and then hides him again	
 			danforden.animate({"bottom" : "0","right" : "0"}, 300,
 				function() { 	
-					$('#bigdan').delay(1000).animate({"bottom": "-300px", "right" : "-300px"}, 300, 
+					$('#bigdan').delay(1000).animate({"bottom" : "-300px", "right" : "-300px"}, 300, 
 						function()
 						{
 							//clean-up
