@@ -1,4 +1,4 @@
-(function(ns) { //namespace
+(function(ns, document, undefined) {
 	
 	//image and audio variables
 	var _toastyimage;
@@ -100,18 +100,4 @@
 		_loadToasty();
 	}
 	
-})(window.toasty = window.toasty || {});
-
-// ensure jQuery is loaded, then call loadToasty()
-if (typeof jQuery === 'undefined')
-{
-	var j = document.createElement('script');
-	j.type = 'text/javascript';
-	j.src = 'jQuery1.9.0.js';
-	j.onload = loadToasty;
-	document.getElementsByTagName('head')[0].appendChild(j);
-}
-else
-{
-	loadToasty();
-}
+})(window.toasty = window.toasty || {}, document);
